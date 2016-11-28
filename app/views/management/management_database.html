@@ -1,0 +1,21 @@
+<!-- Admin restore view -->
+<h2 class="accordion-entry-title" ng-click="expandElement('database')">
+    <i class="fa fa-database"></i> <span ng-bind="_t('??? Latest database')"></span>
+    <i class="fa accordion-arrow" ng-class="expand.restore  ? 'fa-chevron-up':'fa-chevron-down'"></i>
+</h2>
+<div class="accordion-entry-ctrl" ng-if="expand.database" ng-controller_="ManagementRestoreController">
+    <bb-loader></bb-loader>
+    <div class="form form-page">
+        <div class="fieldset">
+            ??? Phasellus a mollis risus. Aenean rhoncus fermentum nibh, eu pulvinar tellus ultricies eu. Vivamus at lacinia eros. Ut et posuere risus.
+        </div>
+        
+        <div class="fieldset submit-entry">
+            <button type="button" class="btn btn-submit"  title="{{_t('nm_restore_pick_up')}}"
+                    ng-click="uploadFile()" ng-disabled="!managementRestore.confirm || managementRestore.alert.message">
+                <i class="fa fa-download"></i> <span class="btn-name">{{_t('??? Download')}}</span>
+            </button>
+            
+        </div>
+    </div>
+</div>
